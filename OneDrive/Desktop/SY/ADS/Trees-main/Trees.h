@@ -7,5 +7,6 @@
 #include "binaryTree_string.h"
 #include "binarySearchTree_int.h"
 #include "binarySearchTree_char.h"
+#include "binarySearchTree_float.h"
 
 #endif /*Trees_h*/

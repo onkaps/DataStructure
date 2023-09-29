@@ -82,11 +82,14 @@ int main () {
     // Int_CreateBT();
     // IntBT_Inorder(Int_root);
 
-    Int_CreateBST();
-    IntBST_Inorder(Int_BST_root);
+    // Int_CreateBST();
+    // IntBST_Inorder(Int_BST_root);
 
     // Char_CreateBST();
     // CharBST_Inorder(Char_BST_root);
+
+    Float_CreateBST();
+    FloatBST_Inorder(Float_BST_root);
 
     return 0;
 }

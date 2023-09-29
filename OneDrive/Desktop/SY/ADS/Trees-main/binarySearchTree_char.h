@@ -180,7 +180,7 @@ void Char_CreateBST () {
     do {
         printf("\nEnter Node Values : ");
         scanf(" %c", &x);
-        if( x == -1)
+        if( x == '$')
             break;
         CharBST_Insert(x);
     }while( x != '$');
