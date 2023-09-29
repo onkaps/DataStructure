@@ -76,7 +76,7 @@ void IntBT_Inorder_create (IntNode *p) {
 }
 //Function to print the In-order Traversal of Int-type Binary Tree.
 void IntBT_Inorder ( IntNode *p ) {
-    printf("\n\n    Pre-order Traversal of Binary Tree : ");
+    printf("\nIn-order Traversal of Binary Tree : ");
     IntBT_Inorder_create(p);
     printf("\n");
 }

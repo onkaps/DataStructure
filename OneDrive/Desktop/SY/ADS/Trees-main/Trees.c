@@ -67,16 +67,26 @@ int main () {
     // String_CreateBT();
     // StringBT_Preorder_create(String_root);
 
-    IntBST_Insert(45);
-    IntBST_Insert(15);
-    IntBST_Insert(79);
-    IntBST_Insert(90);
-    IntBST_Insert(10);
-    IntBST_Insert(55);
-    IntBST_Insert(12);
-    IntBST_Insert(20);
-    IntBST_Insert(50);
-    IntBST_Preorder(Int_BST_root);
+    // IntBST_Insert(45);
+    // IntBST_Insert(15);
+    // IntBST_Insert(79);
+    // IntBST_Insert(90);
+    // IntBST_Insert(10);
+    // IntBST_Insert(55);
+    // IntBST_Insert(12);
+    // IntBST_Insert(20);
+    // IntBST_Insert(50);
+    // IntBST_Preorder(Int_BST_root);
+
+
+    // Int_CreateBT();
+    // IntBT_Inorder(Int_root);
+
+    Int_CreateBST();
+    IntBST_Inorder(Int_BST_root);
+
+    // Char_CreateBST();
+    // CharBST_Inorder(Char_BST_root);
 
     return 0;
 }
@@ -99,5 +109,6 @@ ERRORS TO BE FIXED .......=>
     1. To create a binary tree, nodes having data-types int, float, char, string call the functions 'Int_CreateBT', 'Float_CreateBT', 'Char_CreateBT', String_CreateBT respectively.
         The roots of the Binary Trees created by the above function calls, are named by "Int_root", "Float_root", "Char_root", "String_root" respectively. 
 
+    
 
 */

@@ -44,7 +44,7 @@ void IntBST_Insert ( int key ) {
         q->rchild = p;  
 }
 
-void IntBST_Preorder_create ( IntBSTNode *p) {
+void IntBST_Preorder_create ( IntBSTNode *p ) {
     if(p){
         printf("%d ", p->data);
         IntBST_Preorder_create(p->lchild);
@@ -116,7 +116,74 @@ IntBSTNode* IntBST_RInsert ( IntBSTNode *p, int key ) {
     return p;
 }
 
+int IntBST_Height ( IntBSTNode  *p ) {
+    int x, y;
+    if(p == NULL)
+        return 0;
+    else {
+        x = IntBST_Height(p->lchild);
+        y = IntBST_Height(p->rchild);
+        if(x>y)
+            return x + 1;
+        else    
+            return y + 1; 
+    }
+}
 
+IntBSTNode* IntBST_InPre ( IntBSTNode *p ) {
+    while(p && p->rchild ) {
+        p = p->rchild;
+    }
+    return p;
+}
 
+IntBSTNode* IntBST_InSucc ( IntBSTNode *p ) {
+    while(p && p->lchild){
+        p = p->lchild;
+    }
+    return p;
+}
+
+IntBSTNode* IntBST_Delete ( IntBSTNode *p, int key ) {
+
+    IntBSTNode* q;
+
+    if( p == NULL)
+        return NULL;
+    if( p->lchild == NULL && p->rchild == NULL){
+        if( p == Int_BST_root)
+            Int_BST_root = NULL;
+        free(p);
+        return NULL; 
+    } 
+
+    if( key < p->data )
+        p->lchild = IntBST_Delete( p->lchild, key);  
+    else if( key > p->data )
+        p->rchild = IntBST_Delete( p->rchild, key);
+    else{
+        if( IntBST_Height( p->lchild) > IntBST_Height(p->rchild)){
+            q = IntBST_InPre(p->lchild);
+            p->data = q->data;
+            p->lchild = IntBST_Delete(p->lchild, q->data);
+        }
+        else{
+            q = IntBST_InSucc(p->rchild);
+            p->data = q->data;
+            p->rchild = IntBST_Delete(p->rchild, q->data);
+        }
+    }
+}  
+
+void Int_CreateBST () {
+    int x;
+    do {
+        printf("\nEnter Node Values : ");
+        scanf("%d", &x);
+        if( x == -1)
+            break;
+        IntBST_Insert(x);
+    }while( x != -1);
+}
 
 #endif /*binarySearchTree_int_h*/

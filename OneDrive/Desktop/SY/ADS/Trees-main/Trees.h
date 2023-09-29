@@ -6,5 +6,6 @@
 #include "binaryTree_char.h"
 #include "binaryTree_string.h"
 #include "binarySearchTree_int.h"
+#include "binarySearchTree_char.h"
 
 #endif /*Trees_h*/
