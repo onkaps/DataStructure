@@ -1,18 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "binarySearchTree_string.h"
 
-
-
-typedef 
-
-
-int main () {
-
+int main()
+{
+  // String_CreateBST();
+  StringBST_Insert("onkar");
+  StringBST_Insert("on");
+  StringBST_Insert("kapuskari");
+  inorder(String_BST_root);
 
   return 0;
-
 }
-
 
 /*
 

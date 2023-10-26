@@ -4,9 +4,10 @@
 #include "binaryTree_int.h"
 #include "binaryTree_float.h"
 #include "binaryTree_char.h"
-#include "binaryTree_string.h"
 #include "binarySearchTree_int.h"
 #include "binarySearchTree_char.h"
 #include "binarySearchTree_float.h"
+#include "binarySearchTree_string.h"
+#include "AVLTree_int.h"
 
 #endif /*Trees_h*/
